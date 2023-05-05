@@ -15,6 +15,7 @@ void setup() {
     Serial.begin(115200);
     M5.begin();
     bleKeyboard.begin();
+    bleKeyboard.setDelay(100); // default 8, set 100 for https://priler.github.io/dino3d/
     M5.Lcd.setRotation(3);
     M5.Imu.Init();  // MPU6886を初期設定する
 }
